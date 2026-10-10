@@ -8,3 +8,18 @@ wheels/
 
 # Virtual environments
 .venv
+
+# secrets / local config
+.env
+config.toml
+
+# collected data and logs
+/data/
+/logs/
+*.pb
+
+# working docs and experiments
+/scratch/
+*.ipynb
+
+.DS_Store

@@ -1,18 +1,19 @@
 [project]
 name = "adelaide-metro-data"
 version = "0.1.0"
-description = "Add your description here"
+description = "Collector for Adelaide Metro GTFS realtime and timetable feeds"
 readme = "README.md"
 authors = [
     { name = "A-Dzulkipli", email = "malik.dzulkipli@gmail.com" }
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "gtfs-realtime-bindings>=3.0.0",
     "requests>=2.34.2",
 ]
 
 [project.scripts]
-adelaide-metro-data = "adelaide_metro_data:main"
+adelaide-metro-data = "adelaide_metro_data.collector:main"
 
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]
