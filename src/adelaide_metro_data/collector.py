@@ -135,7 +135,7 @@ def main():
     Path(cfg["log_dir"]).mkdir(parents=True, exist_ok=True)
 
     jobs = [(run_static, cfg)]
-    for name in ("vehicle_positions", "trip_updates"):
+    for name in ("vehicle_positions", "trip_updates", "service_alerts"):
         fc = cfg[name]
         jobs.append((run_realtime, name, fc["url"], fc["interval"], tuple(fc["timeout"]), cfg))
     threads = [threading.Thread(target=crash_on_error, args=job, daemon=True) for job in jobs]
